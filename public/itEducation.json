@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "image": "https://i.ibb.co/5kzq4Qp/graphic.png",
+    "eventName": "Web Development",
+    "price": "$199",
+    "description": "Join our Web Development Bootcamp and become a proficient developer. Cover HTML, CSS, JavaScript, and popular frameworks like React and Node.js. Gain hands-on experience with real-world projects.",
+    "detailsButton": "Details"
+  },
+  {
+    "id": 2,
+    "image": "https://i.ibb.co/0F66rFg/data-scin.jpg",
+    "eventName": "Data Science",
+    "price": "$149",
+    "description": "Dive into data science and machine learning. Learn data analysis, statistical modeling, and machine learning algorithms. Work on real datasets and gain practical experience with Python libraries like Pandas, NumPy, and Scikit-learn.",
+    "detailsButton": "Details"
+  },
+  {
+    "id": 3,
+    "image": "https://i.ibb.co/c25D6JW/Graphic-Design-Course.webp",
+    "eventName": "Graphic Design",
+    "price": "$179",
+    "description": "Unleash your creativity with our Graphic Design Course. Learn visual communication, layout design, and digital illustration. Use Adobe Illustrator, Photoshop, and InDesign.",
+    "detailsButton": "Details"
+  },
+  {
+    "id": 4,
+    "image": "https://i.ibb.co/vBw63xT/Digital-Marketing-Masterclass.webp",
+    "eventName": "Digital Marketing",
+    "price": "$129",
+    "description": "Elevate your digital marketing skills with our masterclass. Cover SEO, SEM, social media marketing, email marketing, and content strategy. Gain insights into consumer behavior and market trends.",
+    "detailsButton": "Details"
+  },
+  {
+    "id": 5,
+    "image": "https://i.ibb.co/g682H53/mobile-app.jpg",
+    "eventName": "Mobile App",
+    "price": "$169",
+    "description": "Turn app ideas into reality with our Mobile App Development Workshop. Learn app development for Android and iOS platforms. Dive into mobile UI/UX design, app architecture, and responsive layouts.",
+    "detailsButton": "Details"
+  },
+  {
+    "id": 6,
+    "image": "https://i.ibb.co/3YzBvRw/Artificial-Intelligence-Summit.jpg",
+    "eventName": "Artificial Intelligence",
+    "price": "$249",
+    "description": "Explore the world of Artificial Intelligence at our summit. Delve into machine learning, natural language processing, computer vision, and AI ethics. Gain insights into practical applications in fields like healthcare, finance, and autonomous systems.",
+    "detailsButton": "Details"
+  }
+]
