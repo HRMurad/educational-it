@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import useAuth from "../Hooks/useAuth";
@@ -9,6 +9,7 @@ import { FaGoogle } from "react-icons/fa";
 const Login = () => {
   const { user, signInForm, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
+  const location = useLocation();
 
   const loginHandler = (e) => {
     e.preventDefault();
@@ -18,9 +19,11 @@ const Login = () => {
 
     signInForm(email, password)
       .then((result) => {
+        toast.success("Login successful");
+
         console.log(result);
         e.target.reset();
-        navigate("/");
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
         console.log(err);
@@ -32,9 +35,12 @@ const Login = () => {
   const googleHandler = () => {
     loginWithGoogle()
       .then((result) => {
+        toast.success("successfully login");
         console.log(result);
+        navigate(location?.state ? location.state : "/");
       })
       .catch((err) => {
+        toast.err(err.message);
         console.log(err);
       });
   };

@@ -1,7 +1,15 @@
 import { FaBookOpen } from "react-icons/fa";
 import bannerImg from "../../src/assets/images/banner.jpg";
 import { Link } from "react-router-dom";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import Aos from "aos";
 const Header = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <>
       <div className="pt-6">
@@ -11,8 +19,10 @@ const Header = () => {
             backgroundImage: `url(${bannerImg})`,
           }}
         >
-          <div className="hero-overlay bg-opacity-60"></div>
-          <div className="hero-content text-center text-neutral-content">
+          <div
+            className="hero-content text-center text-neutral-content"
+            data-aos="zoom-in-up"
+          >
             <div className="max-w-md">
               <h1 className="mb-5 lg:text-5xl md:text-3xl text-2xl font-bold">
                 HelloTechFixers
