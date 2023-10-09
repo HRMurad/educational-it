@@ -1,5 +1,5 @@
 <h1>Project Name: Tech Event</h1>
-<h2>Project URL: </h2>
+<h2>Project URL:https://educational-it.web.app/ </h2>
 
 ### 1. User Authentication
 
