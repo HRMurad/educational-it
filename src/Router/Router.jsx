@@ -6,11 +6,10 @@ import DetailService from "../Components/DetailService";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ProductBuyRegForm from "../Components/ProductBuyRegForm";
-import DisplayDetailsService from "../Components/DisplayDetailsService";
 import PrivateRoutes from "./PrivateRoutes";
 import About from "../Address/About";
 import Contact from "../Address/Contact";
-import Policy from "../Address/Policy";
+import PortFolio from "../Components/PortFolio";
 
 const router = createBrowserRouter([
   {
@@ -57,8 +56,8 @@ const router = createBrowserRouter([
         element: <Contact></Contact>,
       },
       {
-        path: "/policy",
-        element: <Policy></Policy>,
+        path: "/portfolio",
+        element: <PortFolio></PortFolio>,
       },
     ],
   },

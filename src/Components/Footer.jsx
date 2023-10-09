@@ -19,7 +19,7 @@ const Footer = () => {
               </button>
 
               <p className="lg:text-[16px] md:text-[12px] text-[10px]">
-                Copyright © 2023 - All right reserved by ABC Tech Private Ltd
+                Copyright © 2023 - All right reserved by Tech Event Private Ltd
               </p>
             </div>
           </aside>

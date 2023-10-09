@@ -2,7 +2,6 @@ import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import aboutPic from "../../src/assets/images/banner.jpg";
 import { DiTechcrunch } from "react-icons/di";
-import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const About = () => {
@@ -37,8 +36,8 @@ const About = () => {
                     <DiTechcrunch></DiTechcrunch>
                   </button>
                   <p className="font-bold">
-                    ACME Industries Ltd. <br />
-                    Providing reliable tech since 1992
+                    Tech Event Management <br />
+                    Providing reliable tech since 2020
                   </p>
 
                   <div>
@@ -54,12 +53,12 @@ const About = () => {
                       <section className="bg-white p-4 rounded-lg shadow text-black">
                         <h2 className="text-xl font-semibold mb-2">About Us</h2>
                         <p>
-                          [Your Company Name] is a cutting-edge tech event
-                          company dedicated to delivering unparalleled
-                          experiences in the world of technology and innovation.
-                          With a passion for fostering connections, inspiring
-                          innovation, and celebrating the latest advancements,
-                          we are your go-to partner for exceptional tech events.
+                          Our event is a cutting-edge tech event company
+                          dedicated to delivering unparalleled experiences in
+                          the world of technology and innovation. With a passion
+                          for fostering connections, inspiring innovation, and
+                          celebrating the latest advancements, we are your go-to
+                          partner for exceptional tech events.
                         </p>
                       </section>
 
@@ -94,9 +93,9 @@ const About = () => {
                       <section className="bg-white text-black p-4 mt-4 rounded-lg shadow">
                         <h2 className="text-xl font-semibold mb-2">Value</h2>
                         <p className="text-left">
-                          At [Your Company Name], we bring value through
-                          expertise in tech event management, seamless logistics
-                          and execution, access to a vast network of tech
+                          At our tech event, we bring value through expertise in
+                          tech event management, seamless logistics and
+                          execution, access to a vast network of tech
                           influencers, unforgettable attendee experiences, and
                           measurable results for your brand.
                         </p>

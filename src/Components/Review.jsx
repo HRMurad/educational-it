@@ -24,7 +24,7 @@ const Review = () => {
                 <img src={usa1} className="rounded-box w-full h-[200px]" />
               </div>
               <div>
-                <h1 className="text-white pl-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
+                <h1 className="text-white px-2  h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
                   <Link className="flex justify-center btn btn-warning text-xl font-semibold">
                     WonderFull!
                   </Link>
@@ -41,7 +41,7 @@ const Review = () => {
                 <img src={usa2} className="rounded-box w-full h-[200px]" />
               </div>
               <div>
-                <h1 className="text-white pl-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
+                <h1 className="text-white px-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
                   <Link className="flex justify-center btn btn-warning text-[18px] font-semibold">
                     Spectacular service!
                   </Link>
@@ -57,7 +57,7 @@ const Review = () => {
                 <img src={usa3} className="rounded-box w-full h-[200px]" />
               </div>
               <div>
-                <h1 className="text-white pl-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
+                <h1 className="text-white px-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
                   <Link className="flex justify-center btn btn-warning text-[18px] font-semibold">
                     Impressive service!
                   </Link>
@@ -73,7 +73,7 @@ const Review = () => {
                 <img src={usa4} className="rounded-box w-full h-[200px]" />
               </div>
               <div>
-                <h1 className="text-white pl-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
+                <h1 className="text-white px-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
                   <Link className="flex justify-center btn btn-warning text-[18px] font-semibold">
                     Exceptional experience!
                   </Link>
@@ -89,7 +89,7 @@ const Review = () => {
                 <img src={usa5} className="rounded-box w-full h-[200px]" />
               </div>
               <div>
-                <h1 className="text-white pl-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
+                <h1 className="text-white px-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
                   <Link className="flex justify-center btn btn-warning text-[18px] font-semibold">
                     Incredible service!
                   </Link>

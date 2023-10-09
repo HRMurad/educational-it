@@ -5,6 +5,7 @@ import Navbar from "./Navbar";
 import Services from "./Services";
 import { useLoaderData } from "react-router-dom";
 import Review from "./Review";
+import EventReview from "./EventReview";
 
 const Home = () => {
   const [value, setValue] = useState("");
@@ -24,6 +25,9 @@ const Home = () => {
 
         <div className="lg:px-16 px-2 bg-gray-400">
           <Review></Review>
+        </div>
+        <div>
+          <EventReview></EventReview>
         </div>
         <Footer></Footer>
       </div>

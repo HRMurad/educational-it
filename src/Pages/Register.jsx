@@ -65,7 +65,13 @@ const Register = () => {
   };
 
   const googleHandler = () => {
-    loginWithGoogle().then().catch();
+    loginWithGoogle()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
 
   return (
@@ -73,7 +79,7 @@ const Register = () => {
       <div>
         <Navbar></Navbar>
         <div className="bg-[#0F172A]">
-          <div className="w-[30%] mx-auto bg-gray-200">
+          <div className="lg:w-[40%] md:w-[50%] w-[70%] mx-auto bg-gray-200">
             <div className="text-center pt-4">
               <p className="text-black text-3xl font-bold">Registration Form</p>
             </div>

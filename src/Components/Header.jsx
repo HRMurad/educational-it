@@ -18,12 +18,21 @@ const Header = () => {
                 HelloTechFixers
               </h1>
               <p className="mb-5">
-                Unlocking the Potential of <br />
+                <span className="text-[20px]">Unlocking the Potential of</span>{" "}
+                <br />
                 Emerging Technologies
               </p>
               <div className="flex justify-center">
-                <Link className="text-5xl text-white hover:text-gray-300">
-                  <FaBookOpen></FaBookOpen>
+                <Link to="/portfolio" className="text-5xl ">
+                  <button
+                    className="
+                btn
+                btn-outline
+                btn-warning
+                text-3xl mr-2"
+                  >
+                    <FaBookOpen></FaBookOpen>{" "}
+                  </button>
                 </Link>
               </div>
             </div>

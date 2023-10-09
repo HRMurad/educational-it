@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../Hooks/useAuth";
 import { DiTechcrunch } from "react-icons/di";
+import avatar from "../../src/assets/images/avatar.png";
 
 const Navbar = () => {
   const { user, logOutForm } = useAuth();
@@ -55,15 +56,17 @@ const Navbar = () => {
               </ul>
             </div>
             <div className="flex justify-center items-center">
-              <button
-                className="
+              <Link to="/portfolio">
+                <button
+                  className="
                 btn
                 btn-outline
                 btn-warning
                 text-3xl mr-2"
-              >
-                <DiTechcrunch></DiTechcrunch>
-              </button>
+                >
+                  <DiTechcrunch></DiTechcrunch>
+                </button>
+              </Link>
               <Link className="text-2xl font-bold">
                 <p>
                   <span className="text-[#FD367E] mr-0">T</span>ech
@@ -77,13 +80,19 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="navbar-end">
-            <div>{user?.displayName}</div>
-            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
-                <img src={user?.photoURL} />
-              </div>
-            </label>
-            <div>
+            <div className="flex flex-col justify-center items-center mr-4">
+              <label
+                tabIndex={0}
+                className="btn btn-ghost btn-circle avatar hidden md:block"
+              >
+                <div className="w-10 rounded-full">
+                  <img src={user && user.photoURL ? user.photoURL : avatar} />
+                </div>
+              </label>
+
+              <div className="hidden md:block">{user?.displayName}</div>
+            </div>
+            <div className="hidden md:block">
               {user ? (
                 <button
                   onClick={logOutHandler}
@@ -98,6 +107,43 @@ const Navbar = () => {
                   </button>
                 </Link>
               )}
+            </div>
+            {/*  */}
+
+            <div className="dropdown dropdown-end md:hidden">
+              <div tabIndex={0} className="avatar">
+                <div className="w-10 rounded-full">
+                  <img src={user && user.photoURL ? user.photoURL : avatar} />
+                </div>
+              </div>
+              <ul
+                tabIndex={0}
+                className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+              >
+                <li>
+                  <div className="flex justify-center">
+                    <div>{user?.displayName}</div>
+                  </div>
+                </li>
+                <li>
+                  <div className="flex justify-center">
+                    {user ? (
+                      <button
+                        onClick={logOutHandler}
+                        className="btn bg-[#4e1184] text-white hover:bg-[#4e1184] hover:text-white"
+                      >
+                        LogOut
+                      </button>
+                    ) : (
+                      <Link to="/login">
+                        <button className="btn bg-[#4e1184] text-white hover:bg-[#4e1184] hover:text-white btn-block">
+                          Login
+                        </button>
+                      </Link>
+                    )}
+                  </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>{" "}

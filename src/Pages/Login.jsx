@@ -4,9 +4,10 @@ import Navbar from "../Components/Navbar";
 import useAuth from "../Hooks/useAuth";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FaGoogle } from "react-icons/fa";
 
 const Login = () => {
-  const { user, signInForm } = useAuth();
+  const { user, signInForm, loginWithGoogle } = useAuth();
   const navigate = useNavigate();
 
   const loginHandler = (e) => {
@@ -27,13 +28,22 @@ const Login = () => {
         setLoginError(true);
       });
   };
-
+  // google handler login
+  const googleHandler = () => {
+    loginWithGoogle()
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   return (
     <>
       <div>
         <Navbar></Navbar>
         <div className="bg-[#0F172A]">
-          <div className="w-[30%] mx-auto bg-gray-200">
+          <div className="lg:w-[40%] md:w-[50%] w-[70%] mx-auto bg-gray-200">
             <div className="text-center pt-4">
               <p className="text-black text-3xl font-bold">Login Form</p>
             </div>
@@ -94,6 +104,17 @@ const Login = () => {
                 </div>
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Login</button>
+                </div>
+
+                {/*sign in with google */}
+                <div>
+                  <p className="text-center text-2xl mb-4">Sign up with</p>
+                  <Link
+                    onClick={googleHandler}
+                    className="flex justify-center p-4 border w-12 h-12 rounded-[50%] mx-auto bg-black text-white hover:bg-[#570DF8] hover:text-white"
+                  >
+                    <FaGoogle></FaGoogle>
+                  </Link>
                 </div>
                 <div className=" py-2 lg:text-[16px] text-[12px] ">
                   <p>

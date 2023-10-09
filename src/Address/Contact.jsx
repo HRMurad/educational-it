@@ -36,7 +36,8 @@ const Contact = () => {
                     <DiTechcrunch></DiTechcrunch>
                   </button>
                   <p className="font-bold">
-                    Tech Industries Ltd. <br />
+                    Tech Event Management.
+                    <br />
                     Providing reliable tech since 2020
                   </p>
 
@@ -46,13 +47,19 @@ const Contact = () => {
                     </h1>
                     <nav className="flex justify-center gap-12 py-4 text-3xl">
                       <Link>
-                        <FaFacebook></FaFacebook>
+                        <button className="btn btn-outline btn-error text-2xl">
+                          <FaFacebook></FaFacebook>
+                        </button>
                       </Link>
                       <Link>
-                        <FaTwitter></FaTwitter>
+                        <button className="btn btn-outline btn-error text-2xl">
+                          <FaTwitter></FaTwitter>
+                        </button>
                       </Link>
                       <Link>
-                        <FaLinkedin></FaLinkedin>
+                        <button className="btn btn-outline btn-error text-2xl">
+                          <FaLinkedin></FaLinkedin>
+                        </button>
                       </Link>
                     </nav>
                   </div>
