@@ -13,12 +13,16 @@ const Navbar = () => {
       <li>
         <NavLink to="/">Home</NavLink>
       </li>
-      {/* <li>
-        <NavLink to="/login">Login</NavLink>
-      </li>
-      <li>
-        <NavLink to="/register">Register</NavLink>
-      </li> */}
+      {user && (
+        <>
+          <li className="">
+            <NavLink to="/about">About Us</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact">Contact</NavLink>
+          </li>
+        </>
+      )}
     </>
   );
   return (
@@ -68,26 +72,33 @@ const Navbar = () => {
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 text-xl uppercase">
+            <ul className="menu menu-horizontal px-4 flex  gap-2 text-xl">
               {navLinks}
             </ul>
           </div>
           <div className="navbar-end">
-            <div>{user?.name}</div>
-            {user ? (
-              <button
-                onClick={logOutHandler}
-                className="btn bg-[#4e1184] text-white hover:bg-[#4e1184] hover:text-white"
-              >
-                LogOut
-              </button>
-            ) : (
-              <Link to="/login">
-                <button className="btn bg-[#4e1184] text-white hover:bg-[#4e1184] hover:text-white">
-                  Login
+            <div>{user?.displayName}</div>
+            <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+              <div className="w-10 rounded-full">
+                <img src={user?.photoURL} />
+              </div>
+            </label>
+            <div>
+              {user ? (
+                <button
+                  onClick={logOutHandler}
+                  className="btn bg-[#4e1184] text-white hover:bg-[#4e1184] hover:text-white"
+                >
+                  LogOut
                 </button>
-              </Link>
-            )}
+              ) : (
+                <Link to="/login">
+                  <button className="btn bg-[#4e1184] text-white hover:bg-[#4e1184] hover:text-white">
+                    Login
+                  </button>
+                </Link>
+              )}
+            </div>
           </div>
         </div>{" "}
       </div>

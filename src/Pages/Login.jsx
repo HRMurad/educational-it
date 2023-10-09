@@ -2,6 +2,8 @@ import { Link, useNavigate } from "react-router-dom";
 import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import useAuth from "../Hooks/useAuth";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const { user, signInForm } = useAuth();
@@ -14,15 +16,18 @@ const Login = () => {
     console.log(user, email, password);
 
     signInForm(email, password)
-      .then((res) => {
-        console.log(res);
+      .then((result) => {
+        console.log(result);
         e.target.reset();
         navigate("/");
       })
       .catch((err) => {
         console.log(err);
+        toast.error("Invalid Information,correct it");
+        setLoginError(true);
       });
   };
+
   return (
     <>
       <div>
@@ -39,7 +44,7 @@ const Login = () => {
                     <span className="label-text">Email</span>
                   </label>
                   <input
-                    type="email"
+                    type="text"
                     name="email"
                     placeholder="email"
                     className="input input-bordered"
@@ -58,18 +63,45 @@ const Login = () => {
                     required
                   />
                   <label className="label">
-                    <a href="#" className="label-text-alt link link-hover">
+                    <Link href="#" className="label-text-alt link link-hover">
                       Forgot password?
+                    </Link>
+                  </label>
+                </div>
+                {/* login condition */}
+                <div className="flex items-start mb-6">
+                  <div className="flex items-center h-5">
+                    <input
+                      id="terms"
+                      type="checkbox"
+                      value=""
+                      className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800"
+                      required
+                    />
+                  </div>
+                  <label
+                    htmlFor="terms"
+                    className="ml-2 text-sm font-medium text-black dark:text-black"
+                  >
+                    I agree with the{" "}
+                    <a
+                      href="#"
+                      className="text-blue-600 hover:underline dark:text-blue-500"
+                    >
+                      terms and conditions
                     </a>
                   </label>
                 </div>
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Login</button>
                 </div>
-                <div className="text-center py-2">
+                <div className=" py-2 lg:text-[16px] text-[12px] ">
                   <p>
                     Do not have an account?{" "}
-                    <Link to="/register" className="text-green-800">
+                    <Link
+                      to="/register"
+                      className="text-blue-600 hover:underline dark:text-blue-500  font-semibold"
+                    >
                       Create Account
                     </Link>
                   </p>
@@ -80,6 +112,7 @@ const Login = () => {
         </div>
         <Footer></Footer>
       </div>
+      <ToastContainer></ToastContainer>
     </>
   );
 };

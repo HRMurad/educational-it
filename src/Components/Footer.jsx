@@ -25,24 +25,16 @@ const Footer = () => {
           </aside>
           <nav className="">
             <div className="flex gap-2">
-              <Link
-                to="/about"
-                className="btn btn-outline btn-success normal-case text-xl"
-              >
-                About Us
-              </Link>
-              <Link
-                to="/contact"
-                className="btn btn-outline btn-success normal-case text-xl"
-              >
-                Contact
-              </Link>
-              <Link
-                to="/policy"
-                className="btn btn-outline btn-success normal-case text-xl"
-              >
-                Policy
-              </Link>
+              <div className="form-control">
+                <div className="flex lg:flex-row md:flex-row flex-col gap-1 justify-center items-center">
+                  <textarea
+                    placeholder="Write Your Feedback"
+                    className="textarea textarea-bordered text-center  text-black text-xl"
+                  ></textarea>
+
+                  <button className="btn btn-outline btn-accent">Submit</button>
+                </div>
+              </div>
             </div>
           </nav>
         </footer>

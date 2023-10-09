@@ -18,10 +18,10 @@ const Review = () => {
           </Marquee>
         </div>
         <div className="flex justify-center pb-12">
-          <div className="carousel carousel-center w-[250px] p-4 space-x-4 bg-neutral rounded-box">
+          <div className="carousel carousel-center w-[300px] pb-2 bg-neutral rounded-box">
             <div className="carousel-item flex flex-col">
               <div>
-                <img src={usa1} className="rounded-box w-[200px] h-[200px]" />
+                <img src={usa1} className="rounded-box w-full h-[200px]" />
               </div>
               <div>
                 <h1 className="text-white pl-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
@@ -35,14 +35,14 @@ const Review = () => {
                 </h1>
               </div>
             </div>
-            {/* Repeat the above structure for usa2, usa3, usa4, usa5 */}
+
             <div className="carousel-item flex flex-col">
               <div>
-                <img src={usa2} className="rounded-box w-[200px] h-[200px]" />
+                <img src={usa2} className="rounded-box w-full h-[200px]" />
               </div>
               <div>
                 <h1 className="text-white pl-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
-                  <Link className="flex justify-center btn btn-warning text-[14px] font-semibold">
+                  <Link className="flex justify-center btn btn-warning text-[18px] font-semibold">
                     Spectacular service!
                   </Link>
                   <br />
@@ -54,11 +54,11 @@ const Review = () => {
             </div>
             <div className="carousel-item flex flex-col">
               <div>
-                <img src={usa3} className="rounded-box w-[200px] h-[200px]" />
+                <img src={usa3} className="rounded-box w-full h-[200px]" />
               </div>
               <div>
                 <h1 className="text-white pl-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
-                  <Link className="flex justify-center btn btn-warning text-[12px] font-semibold">
+                  <Link className="flex justify-center btn btn-warning text-[18px] font-semibold">
                     Impressive service!
                   </Link>
                   <br />
@@ -70,11 +70,11 @@ const Review = () => {
             </div>
             <div className="carousel-item flex flex-col">
               <div>
-                <img src={usa4} className="rounded-box w-[200px] h-[200px]" />
+                <img src={usa4} className="rounded-box w-full h-[200px]" />
               </div>
               <div>
                 <h1 className="text-white pl-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
-                  <Link className="flex justify-center btn btn-warning text-[12px] font-semibold">
+                  <Link className="flex justify-center btn btn-warning text-[18px] font-semibold">
                     Exceptional experience!
                   </Link>
                   <br />
@@ -86,11 +86,11 @@ const Review = () => {
             </div>
             <div className="carousel-item flex flex-col">
               <div>
-                <img src={usa5} className="rounded-box w-[200px] h-[200px]" />
+                <img src={usa5} className="rounded-box w-full h-[200px]" />
               </div>
               <div>
                 <h1 className="text-white pl-2 h-[230px] w-[200px] mx-auto bg-[#334155] my-2 text-left rounded-lg">
-                  <Link className="flex justify-center btn btn-warning text-[14px] font-semibold">
+                  <Link className="flex justify-center btn btn-warning text-[18px] font-semibold">
                     Incredible service!
                   </Link>
                   <br />
