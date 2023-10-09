@@ -1,10 +1,18 @@
 import React from "react";
 import productViewImg from "../../src/assets/images/banner.jpg";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const EventReview = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <>
-      <div className="text-center">
+      <div className="text-center" data-aos="zoom-in">
         <p className="lg:text-4xl md:text-2xl text-xl font-bold pt-8 text-amber-800 pb-6">
           Past Record on our event
         </p>

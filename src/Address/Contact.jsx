@@ -4,8 +4,16 @@ import Navbar from "../Components/Navbar";
 import aboutPic from "../../src/assets/images/banner.jpg";
 import { DiTechcrunch } from "react-icons/di";
 import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Contact = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <>
       <div>
@@ -14,6 +22,9 @@ const Contact = () => {
           <div className="flex flex-col items-center pb-10">
             <img
               className="w-[330px] h-[330px] my-6 rounded-full shadow-lg"
+              data-aos="flip-left"
+              data-aos-easing="ease-out-cubic"
+              data-aos-duration="2000"
               src={aboutPic}
               alt="Bonnie image"
             />

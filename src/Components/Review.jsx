@@ -5,8 +5,16 @@ import usa3 from "../../src/assets/images/usa3.jpg";
 import usa4 from "../../src/assets/images/usa4.jpg";
 import usa5 from "../../src/assets/images/usa5.jpg";
 import { Link } from "react-router-dom";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import Aos from "aos";
 
 const Review = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 2000,
+    });
+  }, []);
   return (
     <>
       <div className="">
@@ -17,7 +25,7 @@ const Review = () => {
             </Link>
           </Marquee>
         </div>
-        <div className="flex justify-center pb-12">
+        <div className="flex justify-center pb-12" data-aos="zoom-in-up">
           <div className="carousel carousel-center w-[300px] pb-2 bg-neutral rounded-box">
             <div className="carousel-item flex flex-col">
               <div>
